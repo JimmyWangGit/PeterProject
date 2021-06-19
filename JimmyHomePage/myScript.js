@@ -2,6 +2,8 @@ function postComment() {
 	//var comment = document().getElementById("#userComment").val();
 	var comment=$("#userComment").val();
 
+	console.log("Get here");
+
 	$.ajax({
 		url: "http://localhost:8080/comment/add",
 		data: {
