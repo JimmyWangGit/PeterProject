@@ -34,13 +34,13 @@ public class JimmyHomePageApplicationTests {
         return String.format("Hello %s!", name);
     }
 
-    @GetMapping("/comment/add")
+    @GetMapping("/springPrj/add")
     public void AddComments(@RequestParam(value = "comment", defaultValue = "World") String commentValue) {
         AddComment(commentValue);
 
     }
 
-    @GetMapping("/comment/get")
+    @GetMapping("/srpingPrj/get")
     public void GetComments(@RequestParam(value = "comment", defaultValue = "World") String commentValue) {
         GetComment(commentValue);
 

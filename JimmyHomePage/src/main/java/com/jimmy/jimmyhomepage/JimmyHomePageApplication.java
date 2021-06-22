@@ -37,7 +37,6 @@ public class JimmyHomePageApplication {
     @GetMapping("/springPrj/add")
     public void AddComments(@RequestParam(value = "comment", defaultValue = "World") String commentValue) {
         AddComment(commentValue);
-
     }
 
     @GetMapping("/srpingPrj/get")
@@ -102,9 +101,9 @@ public class JimmyHomePageApplication {
     public void GetComment(String commentValue) {
 
         Connection conn = connectDB();
-
         Calendar calendar = Calendar.getInstance();
         java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
+
         try {
             String query = " insert into comment (date, comment)"
                     + " values (?, ?)";
